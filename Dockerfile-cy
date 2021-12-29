@@ -1,0 +1,9 @@
+FROM cypress/included:9.0.0
+
+WORKDIR /e2e
+
+COPY package.json .
+
+RUN yarn install
+
+COPY . /e2e

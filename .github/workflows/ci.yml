@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  testing:
+    name: Testes de unidades, integração e end to end
+    runs-on: ubuntu-latest
+    env:
+      CYPRESS_CACHE_FOLDER: ~/cypress-cache
+      CYPRESS_baseUrl: http://localhost:3000
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Download node_modules
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Jest (unidade e integração)
+        run: yarn test
+
+      - name: Cache Cypress bin
+        uses: actions/cache@v2
+        id: cypress-binary-cache
+        with:
+          path: ~/cypress-cache
+          key: ${{ runner.os }}-cypress-bin-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Download Cypress
+        if: steps.cypress-binary-cache.outputs.cache-hit != 'true'
+        run: yarn cypress install
+
+      - name: Cypress (end to end)
+        uses: cypress-io/github-action@v2
+        with:
+          record: false
+          headless: true
+          start: yarn cy:start
+          wait-on: http://localhost:3000
+          command: yarn cy:test --config video=false
+
+  build:
+    needs: testing
+    name: Build e deploy da demo
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+      - name: Download node_modules
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn build:gh
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
