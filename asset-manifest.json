@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/isb-conecta_ui/static/js/main.f60d0da7.chunk.js",
-    "main.js.map": "/isb-conecta_ui/static/js/main.f60d0da7.chunk.js.map",
-    "runtime-main.js": "/isb-conecta_ui/static/js/runtime-main.417a93af.js",
-    "runtime-main.js.map": "/isb-conecta_ui/static/js/runtime-main.417a93af.js.map",
-    "static/css/2.c55f41dc.chunk.css": "/isb-conecta_ui/static/css/2.c55f41dc.chunk.css",
-    "static/js/2.76bb1d0a.chunk.js": "/isb-conecta_ui/static/js/2.76bb1d0a.chunk.js",
-    "static/js/2.76bb1d0a.chunk.js.map": "/isb-conecta_ui/static/js/2.76bb1d0a.chunk.js.map",
-    "index.html": "/isb-conecta_ui/index.html",
-    "static/css/2.c55f41dc.chunk.css.map": "/isb-conecta_ui/static/css/2.c55f41dc.chunk.css.map",
-    "static/js/2.76bb1d0a.chunk.js.LICENSE.txt": "/isb-conecta_ui/static/js/2.76bb1d0a.chunk.js.LICENSE.txt"
+    "main.js": "/conceitorio_ui/static/js/main.f2a1e129.chunk.js",
+    "main.js.map": "/conceitorio_ui/static/js/main.f2a1e129.chunk.js.map",
+    "runtime-main.js": "/conceitorio_ui/static/js/runtime-main.c3b7cd76.js",
+    "runtime-main.js.map": "/conceitorio_ui/static/js/runtime-main.c3b7cd76.js.map",
+    "static/css/2.c55f41dc.chunk.css": "/conceitorio_ui/static/css/2.c55f41dc.chunk.css",
+    "static/js/2.b0a31390.chunk.js": "/conceitorio_ui/static/js/2.b0a31390.chunk.js",
+    "static/js/2.b0a31390.chunk.js.map": "/conceitorio_ui/static/js/2.b0a31390.chunk.js.map",
+    "index.html": "/conceitorio_ui/index.html",
+    "static/css/2.c55f41dc.chunk.css.map": "/conceitorio_ui/static/css/2.c55f41dc.chunk.css.map",
+    "static/js/2.b0a31390.chunk.js.LICENSE.txt": "/conceitorio_ui/static/js/2.b0a31390.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.417a93af.js",
+    "static/js/runtime-main.c3b7cd76.js",
     "static/css/2.c55f41dc.chunk.css",
-    "static/js/2.76bb1d0a.chunk.js",
-    "static/js/main.f60d0da7.chunk.js"
+    "static/js/2.b0a31390.chunk.js",
+    "static/js/main.f2a1e129.chunk.js"
   ]
 }
