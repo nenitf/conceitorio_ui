@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/isb-conecta_ui/static/js/main.f60d0da7.chunk.js",
+    "main.js.map": "/isb-conecta_ui/static/js/main.f60d0da7.chunk.js.map",
+    "runtime-main.js": "/isb-conecta_ui/static/js/runtime-main.417a93af.js",
+    "runtime-main.js.map": "/isb-conecta_ui/static/js/runtime-main.417a93af.js.map",
+    "static/css/2.c55f41dc.chunk.css": "/isb-conecta_ui/static/css/2.c55f41dc.chunk.css",
+    "static/js/2.76bb1d0a.chunk.js": "/isb-conecta_ui/static/js/2.76bb1d0a.chunk.js",
+    "static/js/2.76bb1d0a.chunk.js.map": "/isb-conecta_ui/static/js/2.76bb1d0a.chunk.js.map",
+    "index.html": "/isb-conecta_ui/index.html",
+    "static/css/2.c55f41dc.chunk.css.map": "/isb-conecta_ui/static/css/2.c55f41dc.chunk.css.map",
+    "static/js/2.76bb1d0a.chunk.js.LICENSE.txt": "/isb-conecta_ui/static/js/2.76bb1d0a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.417a93af.js",
+    "static/css/2.c55f41dc.chunk.css",
+    "static/js/2.76bb1d0a.chunk.js",
+    "static/js/main.f60d0da7.chunk.js"
+  ]
+}
