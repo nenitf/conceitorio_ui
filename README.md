@@ -14,6 +14,8 @@ docker-compose up -d
 
 > Pare o ambiente com ``docker-compose down``
 
+> Para comandos do yarn utilize ``docker-compose exec app yarn <complemento>``
+
 2. Inicie o servidor
 
 ```sh
@@ -45,3 +47,5 @@ docker-compose exec app yarn test
 ```sh
 docker-compose -f docker-compose-cy.yml up --abort-on-container-exit
 ```
+
+> Caso alguma dependência tenha sido alterada utilize ``docker-compose -f docker-compose-cy.yml up --abort-on-container-exit --build``

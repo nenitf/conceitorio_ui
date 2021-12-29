@@ -16,7 +16,7 @@ services:
       dockerfile: Dockerfile-cy
     working_dir: /e2e
     volumes:
-      - ./:/e2e
+      - .:/e2e
       - /e2e/node_modules
     environment:
       - CYPRESS_baseUrl=http://app:3000

@@ -2,11 +2,8 @@ FROM node:16-alpine
 
 ENV NODE_ENV development
 
+COPY . /app
+
 WORKDIR /app
 
-COPY package.json .
-COPY yarn.lock .
-
 RUN yarn install
-
-COPY . .
