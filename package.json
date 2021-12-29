@@ -25,7 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:gh": "PUBLIC_URL=/isb-conecta_ui react-scripts build",
+    "build:gh": "PUBLIC_URL=/conceitorio_ui react-scripts build",
     "test": "react-scripts test",
     "cy:test": "cypress run",
     "cy:open": "cypress open",
