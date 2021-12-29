@@ -1,21 +1,21 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.main`
-    padding: 4rem;
+  padding: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  & > div {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    max-width: 1100px;
+  }
 
-    & > div {
-        width: 100%;
-        max-width: 1100px;
-    }
-
-    h1 strong {
-        text-transform: uppercase;
-        display: block;
-    }
+  h1 strong {
+    text-transform: uppercase;
+    display: block;
+  }
 `
 
 interface MainProps {
@@ -23,11 +23,11 @@ interface MainProps {
 }
 
 export function Main({ children }: MainProps) {
-    return (
-        <Container>
-            <div>
-                {children}
-            </div>
-        </Container>
-    )
+  return (
+    <Container>
+      <div>
+        {children}
+      </div>
+    </Container>
+  )
 }
