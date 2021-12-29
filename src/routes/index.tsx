@@ -7,6 +7,7 @@ import { Footer } from 'components/Footer'
 import { Main } from 'components/Main'
 
 import Dashboard from 'pages/Dashboard'
+import ConsultaCreate from 'pages/Consulta/Create'
 import { NotFound404 } from 'pages/NotFound404'
 
 export default function Routing() {
@@ -17,6 +18,7 @@ export default function Routing() {
       <Main>
         <Routes>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/consulta/create" element={<ConsultaCreate />} />
           <Route path="/404" element={<NotFound404 />} />
           <Route path="*" element={<NotFound404 />} />
         </Routes>
