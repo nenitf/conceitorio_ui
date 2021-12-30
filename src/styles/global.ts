@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
     --text-body: #969cb3;
     --error-color: #E44132;
 
-    --background: var(--cyan-light);
+    --background: var(--white);
     --shape: #fff;
   }
 

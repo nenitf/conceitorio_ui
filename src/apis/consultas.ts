@@ -6,7 +6,7 @@ export interface Paciente {
 }
 
 export interface Consulta {
-  id: number
+  id?: number
   paciente: Paciente
   confirmado: boolean
 }

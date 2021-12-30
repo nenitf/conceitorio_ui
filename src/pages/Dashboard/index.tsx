@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+
 import { getConsultasFuturas, Consulta } from 'apis/consultas';
 
 export default function Dashboard() {
@@ -18,7 +20,7 @@ export default function Dashboard() {
     <>
       <ul aria-label="Próximas consultas">
         {consultas.map(c => (
-          <li key={c.id}><a href={`/consulta/${c.id}`}>{c.paciente.nome}</a></li>
+          <li key={c.id}><Link to={`/consulta/${c.id}`}>{c.paciente.nome}</Link></li>
         ))}
       </ul>
     </>
