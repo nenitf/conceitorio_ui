@@ -11,7 +11,7 @@ export function Header() {
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/consulta/create">Agendar consulta</Nav.Link>
             <NavDropdown title="Cadastros">
-              <NavDropdown.Item as={Link} to="/medico/create">Médicos</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/medico">Médicos</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

@@ -7,9 +7,9 @@ export function get(url: string, config: AxiosRequestConfig = {}) {
       .then(resp => {
         resolve(resp.data);
       })
-      .catch(err => {
-        console.log('deu erro aq')
-        reject(err);
+      .catch(error => {
+        console.log({error})
+        reject(error);
       });
   });
 }
